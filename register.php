@@ -1,24 +1,63 @@
+<?php 
+include 'config.php';
+
+error_reporting(0);
+session_start();
+if (isset($_SESSION['username'])) {
+    header("Location: index.php");
+}
+if (isset($_POST['submit'])) {
+    $id = $_POST['id'];
+    $nama = $_POST['nama'];
+    $password = ($_POST['password']);
+    
+ 
+    if ($password) {
+        $sql = "SELECT * FROM user WHERE nama='$nama'";
+        $result = mysqli_query($conn, $sql);
+        if (!$result->num_rows > 0) {
+            $sql = "INSERT INTO user (id, nama, password)
+                    VALUES ('$id', '$nama', '$password')";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+                echo "<script>alert('Selamat, registrasi berhasil!')</script>";
+                $id = "";
+                $nama = "";
+                $_POST['password'] = "";
+            } else {
+                echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+            }
+        } else {
+            echo "<script>alert('Woops! nama Sudah Terdaftar.')</script>";
+        } 
+    } else {
+        echo "<script>alert('Password Tidak Sesuai')</script>";
+    }
+}
+?>
+ 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>REGISTER</title>
-    <link rel="stylesheet" href="kode.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="register.css">
 </head>
-<body bgcolor="black">
+<body>
     <div class="login">
-    <h3><center>REGISTRASI</center> </h3>
+    <h3><center>SIGN UP</center> </h3>
         <form action="" method="POST">
-            <label>Username</label>
-                <input type="username" placeholder="Username" class="form" name="username" value="<?php echo $username; ?>" required>
-            <label>Alamat</label>
-                <input type="alamat" placeholder="Alamat" class="form" name="alamat" value="<?php echo $alamat; ?>" required>
+            <label>ID</label>
+                <input type="id" placeholder="id" class="form" name="id" value="<?php echo $id; ?>" required>
+            <label>Nama</label>
+                <input type="nama" placeholder="nama" class="form" name="nama" value="<?php echo $nama; ?>" required>
             <label>Password</label>
                 <input type="password" placeholder="Password" class="form" name="password" value="<?php echo $_POST['password']; ?>" required>
-            <label>Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" class="form" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
             <input type="submit" name="submit" class="tombol" value="REGISTER">
-            <p class="form">Anda sudah punya akun? <a href="login.php">Login </a></p>
+            <p class="form">Have Already Account? <a href="login.php">Login </a></p>
         </form>
+    </div>
+    <div class="right">
+        <img src="logo.png">
     </div>
 </body>
 </html>

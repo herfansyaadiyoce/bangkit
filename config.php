@@ -3,12 +3,8 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$database = "barber";
+$database = "responsii";
  
-$conn = mysqli_connect($server, $user, $pass, $database);
- 
-if (!$conn) {
-    die("<script>alert('Gagal tersambung dengan database.')</script>");
-}
+$con = mysqli_connect('localhost','root','','responsii') or die ('Gagal Terhubung Ke Database');
  
 ?>
