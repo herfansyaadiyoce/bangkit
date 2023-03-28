@@ -40,24 +40,26 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="kode.css">
 </head>
 <body>
+<div class="container">
     <div class="login">
-    <h3><center>SIGN UP</center> </h3>
         <form action="" method="POST">
+        <h3><center>SIGN UP</center> </h3>
             <label>ID</label>
-                <input type="id" placeholder="id" class="form" name="id" value="<?php echo $id; ?>" required>
+                <input type="id" placeholder="Masukan ID" class="form" name="id" value="<?php echo $id; ?>" required>
             <label>Nama</label>
-                <input type="nama" placeholder="nama" class="form" name="nama" value="<?php echo $nama; ?>" required>
+                <input type="nama" placeholder="Masukan Nama" class="form" name="nama" value="<?php echo $nama; ?>" required>
             <label>Password</label>
-                <input type="password" placeholder="Password" class="form" name="password" value="<?php echo $_POST['password']; ?>" required>
-            <input type="submit" name="submit" class="tombol" value="REGISTER">
+                <input type="password" placeholder="Masukan Password" class="form" name="password" value="<?php echo $_POST['password']; ?>" required>
+            <input type="submit" name="submit" class="btn" value="REGISTER">
             <p class="form">Have Already Account? <a href="login.php">Login </a></p>
         </form>
     </div>
-    <div class="right">
+    <div class="rightimg">
         <img src="logo.png">
     </div>
+</div>
 </body>
 </html>

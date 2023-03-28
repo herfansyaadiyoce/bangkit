@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kode.css">
 </head>
 
 <body>
@@ -18,19 +18,18 @@ session_start();
         <div class="login">
             <form action="" method="POST">
                 <h1>LOGIN</h1>
-                <p>Responsi Praktikum PWD</p>
                 <hr>
                 <div class="form-group">
-                            <label>ID Admin: </label>
-                            <input type="number" name="id" placeholder="Masukan ID admin" class=ïnput-control">
-                        </div>
+                    <label>ID : </label>
+                    <input type="number" name="id" placeholder="Masukan ID " class="ïnput-control">
+                </div>
 
-                        <div class="form-group">
-                            <label>Password : </label>
-                            <input type="password" name="pass" placeholder="Masukan Password" class=ïnput-control">
-                        </div>
-                        <input type="submit"name="submit" value="Login" class="btn">
-                        <a href="register.php">Sign Up</a>
+                <div class="form-group">
+                    <label>Password : </label>
+                    <input type="password" name="pass" placeholder="Masukan Password" class="ïnput-control">
+                </div>
+                <input type="submit"name="submit" value="LOGIN" class="btn">
+                <a href="register.php">Sign Up</a>
             </form>
             <?php
                 if(isset($_POST['submit'])){
