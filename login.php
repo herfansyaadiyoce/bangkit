@@ -40,7 +40,7 @@ session_start();
                    if (mysqli_num_rows($cek) > 0){
                     $d = mysqli_fetch_object($cek);
                     if($pass == $d ->password){
-                        $_SESSION['status_login']  = true;
+                        $_SESSION['status_login']  = true; 
                         $_SESSION['id']          = $d->id;
                         $_SESSION['unama']         = $d->nama;
 
