@@ -46,7 +46,8 @@ if (isset($_POST['submit'])) {
 <div class="container">
     <div class="login">
         <form action="" method="POST">
-        <h3><center>SIGN UP</center> </h3>
+        <h1><center>SIGN UP</center> </h1>
+        <hr>
             <label>ID</label>
                 <input type="id" placeholder="Masukan ID" class="form" name="id" value="<?php echo $id; ?>" required>
             <label>Nama</label>
