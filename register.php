@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
     <div class="rightimg">
-        <img src="logobarber.png">
+        <img src="logo.png">
     </div>
 </div>
 </body>

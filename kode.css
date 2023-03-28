@@ -26,14 +26,14 @@ p{
 .container {
     width: 100%;
     display: flex;
-    max-width: 850px;
+    max-width: 806px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .login {
-    width: 400px;
+    width: 387px;
     font-weight: bold;
 }
 
@@ -59,7 +59,7 @@ p {
 }
 
 .right img {
-    width: 350px;
+    width: 375px;
     height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px
