@@ -1,7 +1,32 @@
-<?php
+<?php 
+ 
+include 'config.php';
+ 
+error_reporting(0);
+ 
 session_start();
-    include 'config.php';
+ 
+if (isset($_SESSION['username'])) {
+    header("Location: beranda.php");
+}
+ 
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+ 
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+    if ($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location: beranda.php");
+    } else {
+        echo "<script>alert('username atau password Anda salah. Silahkan coba lagi!')</script>";
+    }
+}
+ 
 ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +34,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="kode.css">
 </head>
 
@@ -20,41 +45,17 @@ session_start();
                 <h1>LOGIN</h1>
                 <hr>
                 <div class="form-group">
-                    <label>ID : </label>
-                    <input type="number" name="id" placeholder="Masukan ID " class="ïnput-control">
+                    <label>Username : </label>
+                    <input type="username" name="username" class="ïnput-control" placeholder="Masukan Username" value="<?php echo $username; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>Password : </label>
-                    <input type="password" name="pass" placeholder="Masukan Password" class="ïnput-control">
+                    <input type="password" name="password" placeholder="Masukan Password" class="ïnput-control" value="<?php echo $_POST['password']; ?>" required>
                 </div>
                 <input type="submit"name="submit" value="LOGIN" class="btn">
-                <a href="register.php">Sign Up</a>
+                <p>Don't have an account? <a href="register.php">Sign Up</a> </p>
             </form>
-            <?php
-                if(isset($_POST['submit'])){
-                   $id = $_POST['id'];
-                   $pass = $_POST['pass'];
-
-                   $cek = mysqli_query($con, "SELECT * FROM user WHERE id = '".$id."' ");
-                   if (mysqli_num_rows($cek) > 0){
-                    $d = mysqli_fetch_object($cek);
-                    if($pass == $d ->password){
-                        $_SESSION['status_login']  = true; 
-                        $_SESSION['id']          = $d->id;
-                        $_SESSION['unama']         = $d->nama;
-
-                        echo "<script>window.location = 'index.php'</script>";
-                    }else{
-                        echo "<script>alert('Password Salah')</script>";
-                    }
-                    
-                   }else{
-                    echo "<script>alert('ID Tidak Ditemukan')</script>";
-                   }   
-                }      
-            ?>
-
         </div>
         <div class="right">
             <img src="logo.png">

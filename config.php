@@ -5,6 +5,10 @@ $user = "root";
 $pass = "";
 $database = "bangkit";
  
-$con = mysqli_connect('localhost','root','','bangkit') or die ('Gagal Terhubung Ke Database');
+$conn = mysqli_connect($server, $user, $pass, $database);
+ 
+if (!$conn) {
+    die("<script>alert('Gagal tersambung dengan database.')</script>");
+}
  
 ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Mar 2023 pada 17.04
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.27
+-- Generation Time: Dec 29, 2022 at 03:33 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,45 +24,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user` (
-  `id` int(50) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user` (`id`, `nama`, `password`) VALUES
-(1, 'raihan', 'raihan'),
-(3, 'naufal', 'naufal123'),
-(5, 'Budi', 'budi123'),
-(6, 'Roy Huda', 'roy'),
-(46, 'Raihan', 'raihan');
+INSERT INTO `users` (`id`, `username`, `alamat`, `password`) VALUES
+(1, 'herfan', 'jogja', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
 --
-
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

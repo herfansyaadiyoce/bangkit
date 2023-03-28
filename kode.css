@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #dadada;
+    background: #00235b;
 }
 
 h1{
@@ -66,8 +66,7 @@ p {
 }
 
 .rightimg img {
-    top: 50px;
-    width: 415px;
+    width: 500px;
     height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px
@@ -100,7 +99,7 @@ input {
     cursor: pointer;
     margin-top: 20px;
     border-radius: 5px;
-    background: #FD5E53;
+    background: #f84200;
 }
 
 button:hover {
@@ -134,4 +133,26 @@ button:hover {
         width: 50%;
         height: 50%;
     }
+}
+.logout{
+	width: 350px;
+	margin: 80px auto;
+	padding: 20px 20px;
+	font-family: sans-serif;
+	background: white;
+    color: black;
+    text-align: left;
+	text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.tombol{
+	background: #f84200;
+	color: white;
+	font-size: 15px;
+	width: 100%;
+	border: none;
+	border-radius: 30px;
+	padding: 8px 15px;
+    font-weight: bold;
 }
