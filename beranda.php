@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
         <a href="beranda.php">BERANDA</a>
         <a href="#SERVICE">SERVICE</a>
         <a href="#gallery">GALLERY</a>
-        <a href="about.php">ABOUT</a>
+        <a href="#about.php">ABOUT</a>
         <a href="keluar.php">LOG OUT</a>
     </div>
     
