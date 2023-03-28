@@ -27,6 +27,7 @@ if (!isset($_SESSION['username'])) {
         <a href="about.php">ABOUT</a>
         <a href="keluar.php">LOG OUT</a>
     </div>
+    
 </div>
 </body>
 </html>
