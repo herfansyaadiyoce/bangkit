@@ -18,32 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `responsii`
+-- Database: `bangkit`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `mahasiswa`
---
-
-CREATE TABLE `mahasiswa` (
-  `nim` varchar(50) NOT NULL,
-  `nama` text NOT NULL,
-  `nilai` int(50) NOT NULL,
-  `huruf` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`nim`, `nama`, `nilai`, `huruf`) VALUES
-('2000018001', 'Niko Naufal', 90, 'A'),
-('2000018002', 'Roy Huda', 90, 'A'),
-('2000018003', 'Hario', 85, 'A-'),
-('2000018004', 'Raihan', 80, 'B+'),
-('2000018005', 'Hafiz', 85, 'A-');
 
 -- --------------------------------------------------------
 

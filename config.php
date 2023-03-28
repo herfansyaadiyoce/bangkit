@@ -3,8 +3,8 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$database = "responsii";
+$database = "bangkit";
  
-$con = mysqli_connect('localhost','root','','responsii') or die ('Gagal Terhubung Ke Database');
+$con = mysqli_connect('localhost','root','','bangkit') or die ('Gagal Terhubung Ke Database');
  
 ?>
