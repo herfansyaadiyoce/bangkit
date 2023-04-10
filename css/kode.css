@@ -10,11 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #00235b;
+    background: #00235B;
 }
 
 h1{
-    color : #00235b;
+    color : #00235B;
     
 }
 
@@ -50,7 +50,7 @@ h1 {
 }
 
 hr {
-    border-top: 2px solid #00235b;
+    border-top: 2px solid #00235B;
 }
 
 p {
@@ -86,7 +86,7 @@ input {
     outline: none;
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid #00235b;
+    border: 2px solid #00235B;
 }
 
 .btn {

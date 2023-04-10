@@ -7,7 +7,7 @@ error_reporting(0);
 session_start();
  
 if (isset($_SESSION['username'])) {
-    header("Location: beranda.php");
+    header("Location: index.html");
 }
  
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
-        header("Location: beranda.php");
+        header("Location: index.html");
     } else {
         echo "<script>alert('username atau password Anda salah. Silahkan coba lagi!')</script>";
     }
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="kode.css">
+    <link rel="stylesheet" href="css/kode.css">
 </head>
 
 <body>
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
         <div class="right">
-            <img src="logo.png">
+            <img src="img/logo.png">
         </div>
     </div>
     

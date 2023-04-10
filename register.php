@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="kode.css">
+    <link rel="stylesheet" href="css/kode.css">
 </head>
 <body>
 <div class="container">
@@ -57,12 +57,12 @@ if (isset($_POST['submit'])) {
                 <input type="password" placeholder="Masukan Password" class="form" name="password" value="<?php echo $_POST['password']; ?>" required>
             <label>Confirm Password</label>
                 <input type="password" placeholder="Confirm Password" class="form" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
-            <input type="submit" name="submit" class="btn" value="REGISTER"> 
+            <input type="submit" name="submit" class="btn" value="REGISTER">
             <p class="form">Have Already Account? <a href="login.php">Login </a></p>
         </form>
     </div>
     <div class="rightimg">
-        <img src="logo.png">
+        <img src="img/logo.png">
     </div>
 </div>
 </body>

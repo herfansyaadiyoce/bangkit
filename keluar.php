@@ -13,9 +13,9 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <title>logout</title>
-    <link rel="stylesheet" href="kode.css">
+    <link rel="stylesheet" href="css/kode.css">
 </head>
-<body bgcolor="black">
+<body>
     <div class="logout">
         <form action="logout.php" method="POST" class="form">
             <?php echo "<h2>APAKAH ANDA YAKIN UNTUK LOGOUT DARI AKUN, " . $_SESSION['username'] ."?". "</h2>"; ?>
