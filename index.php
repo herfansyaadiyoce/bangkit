@@ -110,10 +110,7 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                            Bangkit Barbershop adalah sebuah usaha barbershop yang menawarkan jasa potong rambut, cukur jenggot, dan perawatan rambut pria. Kami memiliki tim tukang cukur berpengalaman dan terampil yang siap memberikan pelayanan terbaik untuk semua pelanggan kami. Di Bangkit Barbershop, kami menggunakan alat-alat cukur dan perawatan rambut pria yang berkualitas tinggi untuk memberikan hasil yang presisi dan nyaman. Kami juga menawarkan berbagai macam produk perawatan rambut pria dari merek-merek terkenal dan terpercaya, seperti pomade, minyak jenggot, dan sampo khusus pria.
                             </p>
                         </div>
                     </div>
@@ -147,7 +144,7 @@
                             <div class="service-img">
                                 <img src="img/service-2.jpg" alt="Image">
                             </div>
-                            <h3>Cukur JEMBUT</h3>
+                            <h3>Cukur Jenggot</h3>
                             <p>
                             menghilangkan helai rambut yang telah tumbuh dengan memotongnya dekat dari permukaan kulit. Alat yang digunakan untuk shaving adalah silet atau pisau cukur
                             </p>
@@ -161,7 +158,7 @@
                             </div>
                             <h3>Warna & Cuci Rambut</h3>
                             <p>
-                                Mewarnai rambut sesuai dengan keinginan pelanggan dan Mencuci rambut dengan perawatan yang optimal
+                                Mewarnai rambut sesuai dengan keinginan pelanggan dan Mencuci rambut dengan perawatan yang optimal serta memberika pengalaman yang wahhhhhhhhhhhhhhhhhh
                             </p>
                             <a class="btn" href="portfolio.html">Detail</a>
                         </div>
