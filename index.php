@@ -35,10 +35,10 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.php" class="nav-item nav-link active">Home</a>
-                        <a href="price.html" class="nav-item nav-link">Price</a>
-                        <a href="portfolio.html" class="nav-item nav-link">Gallery</a>
-                        <a href="create.php" class="nav-item nav-link">Booking</a>
+                        <a href="index.php" class="nav-item nav-link active">Beranda</a>
+                        <a href="price.html" class="nav-item nav-link">Harga</a>
+                        <a href="portfolio.html" class="nav-item nav-link">Galeri</a>
+                        <a href="create.php" class="nav-item nav-link">Pemesanan</a>
                         <a href="keluar.php" class="nav-item nav-link">Logout</a>
                     </div>
                 </div>
@@ -135,9 +135,9 @@
                             <div class="service-img">
                                 <img src="img/service-1.jpg" alt="Image">
                             </div>
-                            <h3>Hair Cut</h3>
+                            <h3>Potong Rambut</h3>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                            Gaya rambut, tata rambut, potongan rambut, atau potongan rambut mengacu pada penataan rambut, biasanya di kepala manusia tetapi terkadang di wajah atau tubuh
                             </p>
                             <a class="btn" href="portfolio.html">Detail</a>
                         </div>
@@ -147,9 +147,9 @@
                             <div class="service-img">
                                 <img src="img/service-2.jpg" alt="Image">
                             </div>
-                            <h3>Beard Style</h3>
+                            <h3>Cukur JEMBUT</h3>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                            menghilangkan helai rambut yang telah tumbuh dengan memotongnya dekat dari permukaan kulit. Alat yang digunakan untuk shaving adalah silet atau pisau cukur
                             </p>
                             <a class="btn" href="portfolio.html">Detail</a>
                         </div>
@@ -159,9 +159,9 @@
                             <div class="service-img">
                                 <img src="img/service-3.jpg" alt="Image">
                             </div>
-                            <h3>Color & Wash</h3>
+                            <h3>Warna & Cuci Rambut</h3>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                Mewarnai rambut sesuai dengan keinginan pelanggan dan Mencuci rambut dengan perawatan yang optimal
                             </p>
                             <a class="btn" href="portfolio.html">Detail</a>
                         </div>
