@@ -29,8 +29,6 @@ function cek_data($username, $password){
         if ( $row["username"] == $username && $row["password"] == $password){
             $_SESSION['username'] = $username;
             return header('Location: index.html');
-        }else{
-            return header('Location: login.php');
         }
     endforeach;
 }

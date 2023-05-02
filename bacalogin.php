@@ -8,7 +8,7 @@ $Option = array(
 );
 
 // Tiga link API JSON
-$link1 = "https://bangkit-caf86-default-rtdb.firebaseio.com/users.json";
+$link1 = "https://bangkit-de572-default-rtdb.firebaseio.com/user.json";
 
 // Mengambil data dari setiap link API JSON
 $dataApi1 = file_get_contents($link1, false, stream_context_create($Option));
