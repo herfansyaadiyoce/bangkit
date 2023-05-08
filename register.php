@@ -1,5 +1,6 @@
 <?php 
-include 'config.php';
+//include 'config.php';
+include 'firebaseRDB.php';
 
 error_reporting(0);
 session_start();
@@ -12,28 +13,40 @@ if (isset($_POST['submit'])) {
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
  
-    if ($password == $cpassword) {
-        $sql = "SELECT * FROM users WHERE alamat='$alamat'";
-        $result = mysqli_query($conn, $sql);
-        if (!$result->num_rows > 0) {
-            $sql = "INSERT INTO users (username, alamat, password)
-                    VALUES ('$username', '$alamat', '$password')";
-            $result = mysqli_query($conn, $sql);
-            if ($result) {
-                echo "<script>alert('Selamat, registrasi berhasil!')</script>";
-                $username = "";
-                $alamat = "";
-                $_POST['password'] = "";
-                $_POST['cpassword'] = "";
-            } else {
-                echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
-            }
-        } else {
-            echo "<script>alert('Woops! alamat Sudah Terdaftar.')</script>";
-        } 
-    } else {
-        echo "<script>alert('Password Tidak Sesuai')</script>";
-    }
+
+$db = new firebaseRDB("https://bangkit-de572-default-rtdb.firebaseio.com/");
+
+$insert = $db->insert("user", [
+   "username"     => $_POST['username'],
+   "alamat" => $_POST['alamat'],
+   "password"      => $_POST['password'],
+   "cpassword"    => $_POST['cpassword']
+]);
+
+echo "data saved";
+
+    // if ($password == $cpassword) {
+    //     $sql = "SELECT * FROM users WHERE alamat='$alamat'";
+    //     $result = mysqli_query($conn, $sql);
+    //     if (!$result->num_rows > 0) {
+    //         $sql = "INSERT INTO users (username, alamat, password)
+    //                 VALUES ('$username', '$alamat', '$password')";
+    //         $result = mysqli_query($conn, $sql);
+    //         if ($result) {
+    //             echo "<script>alert('Selamat, registrasi berhasil!')</script>";
+    //             $username = "";
+    //             $alamat = "";
+    //             $_POST['password'] = "";
+    //             $_POST['cpassword'] = "";
+    //         } else {
+    //             echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+    //         }
+    //     } else {
+    //         echo "<script>alert('Woops! alamat Sudah Terdaftar.')</script>";
+    //     } 
+    // } else {
+    //     echo "<script>alert('Password Tidak Sesuai')</script>";
+    // }
 }
 ?>
  
