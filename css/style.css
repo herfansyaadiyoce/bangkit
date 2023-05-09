@@ -729,6 +729,7 @@ a:focus {
     justify-content: flex-start;
     flex-direction: row;
     margin-bottom: 30px;
+    border-radius: 16px;
     background: rgba(29, 36, 52, .04);
     transition: .3s;
 }
@@ -744,18 +745,7 @@ a:focus {
 
 .price .price-img img {
     width: 100%;
-}
-
-.price .price-img::after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
-    background: transparent;
-    border: 1px solid #ffffff;
-    z-index: 1;
+    border-radius: 16px;
 }
 
 .price .price-text {
