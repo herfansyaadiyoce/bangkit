@@ -1,19 +1,19 @@
-<?php 
- 
+<?php
+
 include 'config.php';
- 
+
 error_reporting(0);
- 
+
 session_start();
- 
+
 if (isset($_SESSION['username'])) {
     header("Location: index.php");
 }
- 
+
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
- 
+
     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
@@ -24,9 +24,9 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('username atau password Anda salah. Silahkan coba lagi!')</script>";
     }
 }
- 
+
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
                     <label>Password : </label>
                     <input type="password" name="password" placeholder="Masukan Password" class="ïnput-control" value="<?php echo $_POST['password']; ?>" required>
                 </div>
-                <input type="submit"name="submit" value="LOGIN" class="btn">
+                <input type="submit" name="submit" value="LOGIN" class="btn">
                 <p>Don't have an account? <a href="register.php">Sign Up</a> </p>
             </form>
         </div>
@@ -61,6 +61,7 @@ if (isset($_POST['submit'])) {
             <img src="img/logo.png">
         </div>
     </div>
-    
+
 </body>
+
 </html>

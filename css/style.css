@@ -1167,7 +1167,7 @@ a:focus {
 }
 
 .contact .container-fluid {
-    background: url(../img/barber.jpg) left center no-repeat;
+    background: url(../img/barber.png) left center no-repeat;
     background-size: contain;
 }
 
@@ -1376,6 +1376,7 @@ a:focus {
 
 .footer .copyright .row {
     background: #ffffff;
+    width: 121%;
     padding-top: 25px;
     padding-bottom: 25px;
 }
