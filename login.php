@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 include 'config.php';
@@ -21,13 +20,16 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         header("Location: index.php");
-=======
-<?php 
+    }
+}
+?>
 
-require_once"init.php";
-require_once"lihatdata.php";
+<?php
 
- if (isset($_POST['submit'])) {
+require_once "init.php";
+require_once "lihatdata.php";
+
+if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -38,28 +40,20 @@ require_once"lihatdata.php";
         //     echo "Email belum terdaftar";
         // }
         cek_data($username, $password);
->>>>>>> 846f7f0356a61c30c387cd42bb493319f6c2de99
     } else {
         echo "Sorry it can't be empty";
     }
 }
 
-<<<<<<< HEAD
-=======
 // include 'config.php';
- 
 // error_reporting(0);
- 
 // session_start();
- 
 // if (isset($_SESSION['username'])) {
 //     header("Location: index.php");
 // }
- 
 // if (isset($_POST['submit'])) {
 //     $username = $_POST['username'];
 //     $password = md5($_POST['password']);
- 
 //     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 //     $result = mysqli_query($conn, $sql);
 //     if ($result->num_rows > 0) {
@@ -70,8 +64,6 @@ require_once"lihatdata.php";
 //         echo "<script>alert('username atau password Anda salah. Silahkan coba lagi!')</script>";
 //     }
 // }
- 
->>>>>>> 846f7f0356a61c30c387cd42bb493319f6c2de99
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +90,7 @@ require_once"lihatdata.php";
 
                 <div class="form-group">
                     <label>Password : </label>
-                    <input type="password" name="password" placeholder="Masukan Password" class="ïnput-control"  required>
+                    <input type="password" name="password" placeholder="Masukan Password" class="ïnput-control" required>
                 </div>
                 <input type="submit" name="submit" value="LOGIN" class="btn">
                 <p>Don't have an account? <a href="register.php">Sign Up</a> </p>

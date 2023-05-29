@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="logout">
         <form action="logout.php" method="POST" class="form">
-            <?php echo "<h2>APAKAH ANDA YAKIN UNTUK LOGOUT DARI AKUN, " . $_SESSION['username'] . "?" . "</h2>"; ?>
+            <?php echo "<h2> APAKAH ANDA YAKIN UNTUK LOGOUT DARI AKUN, " . $_SESSION['username'] . "?" . "</h2>"; ?>
             <br> <input type="submit" name="submit" class="tombol" value="LOGOUT">
     </div>
     </form>
