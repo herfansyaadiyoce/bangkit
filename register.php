@@ -1,4 +1,4 @@
-<?php 
+<?php
 //include 'config.php';
 include 'firebaseRDB.php';
 
@@ -12,18 +12,18 @@ if (isset($_POST['submit'])) {
     $alamat = $_POST['alamat'];
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
- 
 
-$db = new firebaseRDB("https://bangkit-de572-default-rtdb.firebaseio.com/");
 
-$insert = $db->insert("user", [
-   "username"     => $_POST['username'],
-   "alamat" => $_POST['alamat'],
-   "password"      => $_POST['password'],
-   "cpassword"    => $_POST['cpassword']
-]);
+    $db = new firebaseRDB("https://bangkit-de572-default-rtdb.firebaseio.com/");
 
-echo "data saved";
+    $insert = $db->insert("user", [
+        "username"     => $_POST['username'],
+        "alamat" => $_POST['alamat'],
+        "password"      => $_POST['password'],
+        "cpassword"    => $_POST['cpassword']
+    ]);
+
+    echo "data saved";
 
     // if ($password == $cpassword) {
     //     $sql = "SELECT * FROM users WHERE alamat='$alamat'";
@@ -49,34 +49,39 @@ echo "data saved";
     // }
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/kode.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="login">
-        <form action="" method="POST">
-        <h1><center>SIGN UP</center> </h1>
-        <hr>
-            <label>Username</label>
+    <div class="container">
+        <div class="login">
+            <form action="" method="POST">
+                <h1>
+                    <center>SIGN UP</center>
+                </h1>
+                <hr>
+                <label>Username</label>
                 <input type="username" placeholder="Masukan Username" class="form" name="username" value="<?php echo $username; ?>" required>
-            <label>Alamat</label>
+                <label>Alamat</label>
                 <input type="alamat" placeholder="Masukan Alamat" class="form" name="alamat" value="<?php echo $alamat; ?>" required>
-            <label>Password</label>
+                <label>Password</label>
                 <input type="password" placeholder="Masukan Password" class="form" name="password" value="<?php echo $_POST['password']; ?>" required>
-            <label>Confirm Password</label>
+                <label>Confirm Password</label>
                 <input type="password" placeholder="Confirm Password" class="form" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
-            <input type="submit" name="submit" class="btn" value="REGISTER">
-            <p class="form">Have Already Account? <a href="login.php">Login </a></p>
-        </form>
+                <input type="submit" name="submit" class="btn" value="REGISTER">
+                <p class="form">Have Already Account? <a href="login.php">Login </a></p>
+            </form>
+        </div>
+        <div class="rightimg">
+            <img src="img/logo.png">
+        </div>
     </div>
-    <div class="rightimg">
-        <img src="img/logo.png">
-    </div>
-</div>
 </body>
+
 </html>
