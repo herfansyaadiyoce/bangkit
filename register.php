@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $cpassword = md5($_POST['cpassword']);
 
 
-    $db = new firebaseRDB("https://bangkit-de572-default-rtdb.firebaseio.com/");
+    $db = new firebaseRDB("https://bangkitv2-19540-default-rtdb.firebaseio.com/");
 
     $insert = $db->insert("user", [
         "username"     => $_POST['username'],
