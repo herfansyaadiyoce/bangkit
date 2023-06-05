@@ -34,6 +34,14 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `booking` (
+  `id_booking` int(11) NOT NULL,
+  `nama_booking` varchar(100) NOT NULL,
+  `nomerhp_booking` varchar(100) NOT NULL,
+  `service_booking` varchar(50) NOT NULL,
+  `pesan_booking` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data for table `users`
 --
@@ -41,6 +49,12 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `alamat`, `password`) VALUES
 (1, 'herfan', 'jogja', '202cb962ac59075b964b07152d234b70');
 
+INSERT INTO `booking` (`id_booking`, `nama_booking`, `nomerhp_booking`, `service_booking`, `pesan_booking`) VALUES
+(1, 'Matematika', 'Erlangga', 'Pendidikan', 'hai'),
+(2, 'Si Kancil', 'booking Indonesia', 'Cerita Dongeng', 'hai'),
+(3, 'Naruto Shippuden', 'Masashi Kishimoto', 'Komik', 'hai'),
+(4, 'Dilan 1899', 'Pidi Baiq', 'Novel', 'hai'),
+(5, 'Bobo', 'Kompas Gramedia', 'Majalah', 'hai');
 --
 -- Indexes for dumped tables
 --
@@ -50,6 +64,8 @@ INSERT INTO `users` (`id`, `username`, `alamat`, `password`) VALUES
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`id_booking`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -61,6 +77,9 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
+ALTER TABLE `booking`
+  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
