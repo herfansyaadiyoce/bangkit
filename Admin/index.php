@@ -26,7 +26,7 @@
     <div class="container bg-info" style="padding-top: 50px; padding-bottom: 30px; padding-left: 1px; padding-right: 1px;">
         <div class="row">
             <div class="col-sm-4">
-                <h3>Tambah Daftar booking</h3>
+                <h3>Tambah Pelanggan</h3>
                 <form role="form" action="insert.php" method="post">
                     <div class="form-group">
                         <label>Nama</label>
@@ -52,7 +52,7 @@
 
             </div>
             <div class="col-sm-8">
-                <h3>Daftar koleksi booking yang pernah dibaca</h3>
+                <h3>Daftar Pelanggan Barber</h3>
                 <table class="table table-striped table-hover dtabel">
                     <thead>
                         <tr>
