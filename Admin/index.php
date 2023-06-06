@@ -2,33 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Beranda</title>
-    <link rel="stylesheet" href="css/booking.css">
-</head>
-
-<body>
-    <div class="header">
-        <a class="judul" href="index.html">
-            <font color="red">BOOKING </font>BARBER
-        </a>
-        <div class="navigasi">
-            <a href="index.html" class="nav-item nav-link active">Beranda</a>
-            <a href="price.html" class="nav-item nav-link">Harga</a>
-            <a href="portfolio.html" class="nav-item nav-link">Galeri</a>
-            <a href="booking.html" class="nav-item nav-link">Pemesanan</a>
-            <a href="pemesanan.php" class="nav-item nav-link">CETAK</a>
-            <a href="logout.php" class="nav-item nav-link">Logout</a>
-        </div>
-    </div>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
     <title>Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +26,7 @@
     <div class="container bg-info" style="padding-top: 50px; padding-bottom: 30px; padding-left: 1px; padding-right: 1px;">
         <div class="row">
             <div class="col-sm-4">
-                <h3>Tambah booking</h3>
+                <h3>Tambah Daftar booking</h3>
                 <form role="form" action="insert.php" method="post">
                     <div class="form-group">
                         <label>Nama</label>
@@ -71,9 +44,9 @@
                         <label>Pesan</label>
                         <input type="text" name="pesan_bk" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-info btn-block">Submit</button>
+                    <button type="submit" class="btn btn-info btn-block">Tambah booking</button>
                     <button type="submit" class="btn btn-info btn-block"><a target="_blank" href="cetak.php">
-                            <font color="White">Cetak Nota</font>
+                            <font color="White">Cetak Daftar booking</font>
                         </a></button>
                 </form>
 
@@ -88,6 +61,7 @@
                             <th>Nomer Hp</th>
                             <th>Service</th>
                             <th>Pesan</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -122,7 +96,7 @@
 </body>
 
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//cdn.datatables.net/1.10.11/jquery/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
         $('.dtabel').DataTable();

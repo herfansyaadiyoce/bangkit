@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Edit Form</title>
+	<title>Edit Data Pelanggan</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
@@ -37,13 +37,13 @@
 				<input type="hidden" name="id_bk" value="<?php echo $row['id_booking']; ?>">
 
 				<div class="form-group">
-					<label>Nama</label>
+					<label>Nama booking</label>
 					<input type="text" name="nama_bk" class="form-control" value="<?php echo $row['nama_booking']; ?>">
 				</div>
 
 				<div class="form-group">
 					<label>Nomer Hp</label>
-					<input type="text" name="nomerhp_bk" class="form-control" value="<?php echo $row['nomerhp_booking']; ?>">
+					<input type="text" name="terbit_bk" class="form-control" value="<?php echo $row['nomerhp_booking']; ?>">
 				</div>
 
 				<div class="form-group">
