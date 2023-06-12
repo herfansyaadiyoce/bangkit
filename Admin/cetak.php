@@ -22,6 +22,8 @@ include "config.php"
                 <th>Nama</th>
                 <th>Nomer Hp</th>
                 <th>Service</th>
+                <th>Waktu</th>
+                <th>Tanggal</th>
                 <th>Pesan</th>
             </tr>
         </thead>
@@ -35,6 +37,8 @@ include "config.php"
                 <td><?php echo $row['nama_booking']; ?></td>
                 <td><?php echo $row['nomerhp_booking']; ?></td>
                 <td><?php echo $row['service_booking']; ?></td>
+                <td><?php echo $row['waktu_booking']; ?></td>
+                <td><?php echo $row['tanggal_booking']; ?></td>
                 <td><?php echo $row['pesan_booking']; ?></td>
             </tr>
 

@@ -11,9 +11,9 @@ $pesan = $_POST['pesan_bk'];
 $query =  "INSERT INTO booking(nama_booking , nomerhp_booking , service_booking, waktu_booking, tanggal_booking, pesan_booking) VALUES('$nama' , '$nomerhp' , '$service',  '$waktu', '$tanggal', '$pesan')";
 
 if (mysqli_query($conn, $query)) {
-	header("location:index.php");
+    header("location:booking.php");
 } else {
-	echo "ERROR, tidak berhasil" . mysqli_error($conn);
+    echo "ERROR, tidak berhasil" . mysqli_error($conn);
 }
 
 mysqli_close($conn);

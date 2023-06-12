@@ -18,6 +18,11 @@
 </head>
 
 <body>
+    <?php
+    include('config.php');
+    $query = "SELECT * FROM booking";
+    $result = mysqli_query($conn, $query);
+    ?>
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -31,7 +36,7 @@
                     <a href="index.html" class="nav-item nav-link">Beranda</a>
                     <a href="price.html" class="nav-item nav-link">Harga</a>
                     <a href="portfolio.html" class="nav-item nav-link">Galeri</a>
-                    <a href="booking.html" class="nav-item nav-link active">Pemesanan</a>
+                    <a href="booking.php" class="nav-item nav-link active">Pemesanan</a>
                     <a href="logout.php" class="nav-item nav-link">Logout</a>
                 </div>
             </div>
@@ -66,23 +71,29 @@
                     <div class="col-md-8">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
+                            <form role="form" action="insert.php" method="post">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="nama_bk" placeholder="Nama" required="required" class="form-control" data-validation-required-message="Silahkan masukan nama">
                                 </div>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" id="number" placeholder="Your Phone Number" required="required" data-validation-required-message="Please enter your phone number" />
-                                    <p class="help-block text-danger"></p>
+                                <div class="form-group">
+                                    <input type="text" id="number" name="nomerhp_bk" placeholder="Nomer HP" required="required" class="form-control" data-validation-required-message="Silahkan masukan nomer HP">
                                 </div>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" id="Service" placeholder="Service" required="required" data-validation-required-message="Please enter a Service" />
-                                    <p class="help-block text-danger"></p>
+                                <div class="form-group">
+                                    <input type="text" id="service" name="service_bk" placeholder="Service" required="required" class="form-control" data-validation-required-message="Silahkan masukan service yang anda pilih">
                                 </div>
-                                <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                    <p class="help-block text-danger"></p>
+                                <div class="form-group">
+                                    <input type="time" id="waktu" name="waktu_bk" required="required" class="form-control" data-validation-required-message="Silahkan masukan waktu booking">
                                 </div>
+                                <div class="form-group">
+                                    <input type="date" id="tanggal" name="tanggal_bk" required="required" class="form-control" data-validation-required-message="Silahkan masukan tanggal booking">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="massage" name="pesan_bk" placeholder="Pesan" required="required" class="form-control" data-validation-required-message="Silahkan masukan pesan"></textarea>
+                                </div>
+                                <!-- <div class="control-group">
+                                    <textarea class="form-control" id="pesan_bk" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div> -->
                                 <div>
                                     <button class="btn" type="submit" id="sendMessageButton">Booking Now</button>
                                 </div>

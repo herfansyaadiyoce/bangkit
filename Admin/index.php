@@ -41,6 +41,14 @@
                         <input type="text" name="service_bk" class="form-control">
                     </div>
                     <div class="form-group">
+                        <label>Waktu</label>
+                        <input type="time" name="waktu_bk" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal</label>
+                        <input type="date" name="tanggal_bk" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <label>Pesan</label>
                         <input type="text" name="pesan_bk" class="form-control">
                     </div>
@@ -60,6 +68,8 @@
                             <th>Nama</th>
                             <th>Nomer Hp</th>
                             <th>Service</th>
+                            <th>Waktu</th>
+                            <th>Tanggal</th>
                             <th>Pesan</th>
                             <th>Aksi</th>
                         </tr>
@@ -75,6 +85,8 @@
                                 <td><?php echo $row['nama_booking']; ?></td>
                                 <td><?php echo $row['nomerhp_booking']; ?></td>
                                 <td><?php echo $row['service_booking']; ?></td>
+                                <td><?php echo $row['waktu_booking']; ?></td>
+                                <td><?php echo $row['tanggal_booking']; ?></td>
                                 <td><?php echo $row['pesan_booking']; ?></td>
                                 <td>
                                     <a href="editform.php?id=<?php echo $row['id_booking']; ?>" class="btn btn-success" role="button">Edit</a>

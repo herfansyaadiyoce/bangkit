@@ -52,6 +52,16 @@
 				</div>
 
 				<div class="form-group">
+					<label>Waktu</label>
+					<input type="time" name="waktu_bk" class="form-control" value="<?php echo $row['waktu_booking']; ?>">
+				</div>
+
+				<div class="form-group">
+					<label>Tanggal</label>
+					<input type="date" name="tanggal_bk" class="form-control" value="<?php echo $row['tanggal_booking']; ?>">
+				</div>
+
+				<div class="form-group">
 					<label>Pesan</label>
 					<input type="text" name="pesan_bk" class="form-control" value="<?php echo $row['pesan_booking']; ?>">
 				</div>
