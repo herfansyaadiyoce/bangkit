@@ -66,6 +66,11 @@
 					<input type="text" name="pesan_bk" class="form-control" value="<?php echo $row['pesan_booking']; ?>">
 				</div>
 
+				<div class="form-group">
+					<label>Harga</label>
+					<input type="text" name="harga_bk" class="form-control" value="<?php echo $row['harga_booking']; ?>">
+				</div>
+
 				<button type="submit" class="btn btn-success btn-block">Edit booking</button>
 
 			<?php

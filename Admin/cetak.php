@@ -25,6 +25,7 @@ include "config.php"
                 <th>Waktu</th>
                 <th>Tanggal</th>
                 <th>Pesan</th>
+                <th>Harga</th>
             </tr>
         </thead>
         <?php
@@ -40,6 +41,7 @@ include "config.php"
                 <td><?php echo $row['waktu_booking']; ?></td>
                 <td><?php echo $row['tanggal_booking']; ?></td>
                 <td><?php echo $row['pesan_booking']; ?></td>
+                <td><?php echo $row['harga_booking']; ?></td>
             </tr>
 
         <?php

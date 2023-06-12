@@ -52,6 +52,10 @@
                         <label>Pesan</label>
                         <input type="text" name="pesan_bk" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label>Harga</label>
+                        <input type="text" name="harga_bk" class="form-control">
+                    </div>
                     <button type="submit" class="btn btn-info btn-block">Tambah booking</button>
                     <button type="submit" class="btn btn-info btn-block"><a target="_blank" href="cetak.php">
                             <font color="White">Cetak Daftar booking</font>
@@ -71,6 +75,7 @@
                             <th>Waktu</th>
                             <th>Tanggal</th>
                             <th>Pesan</th>
+                            <th>Harga</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -88,6 +93,7 @@
                                 <td><?php echo $row['waktu_booking']; ?></td>
                                 <td><?php echo $row['tanggal_booking']; ?></td>
                                 <td><?php echo $row['pesan_booking']; ?></td>
+                                <td><?php echo $row['harga_booking']; ?></td>
                                 <td>
                                     <a href="editform.php?id=<?php echo $row['id_booking']; ?>" class="btn btn-success" role="button">Edit</a>
                                     <a href="delete.php?id=<?php echo $row['id_booking'] ?>" class="btn btn-danger" role="button">Delete</a>
