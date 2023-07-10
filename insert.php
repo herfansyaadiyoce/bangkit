@@ -7,7 +7,7 @@ $service = $_POST['service_bk'];
 $waktu = $_POST['waktu_bk'];
 $tanggal = $_POST['tanggal_bk'];
 $pesan = $_POST['pesan_bk'];
-$harga = $_POST['harga_bk'];
+
 
 $query =  "INSERT INTO booking(nama_booking , nomerhp_booking , service_booking, waktu_booking, tanggal_booking, pesan_booking, harga_booking) VALUES('$nama' , '$nomerhp' , '$service',  '$waktu', '$tanggal', '$pesan', '$harga')";
 

@@ -1,3 +1,34 @@
+<?php
+//include 'config.php';
+include 'firebaseRDB.php';
+
+error_reporting(0);
+session_start();
+
+if (isset($_POST['submit'])) {
+    $username= $_SESSION['username'];
+    $nomorhp = $_POST['nomorhp_bk'];
+    $service = $_POST['service_bk'];
+    $waktu = $_POST['waktu_bk'];
+    $tanggal = $_POST['tanggal_bk'];
+    $pesan =$_POST['pesan_bk'];
+
+
+    $db = new firebaseRDB("https://bangkitv2-19540-default-rtdb.firebaseio.com/");
+
+    $insert = $db->insert("booking", [
+        "username"      => $username,
+        "nomorhp"       =>  $nomorhp,
+        "service"       =>$service,
+        "waktu"         => $waktu,
+        "tanggal"       =>$tanggal,
+        "pesan"         =>$pesan
+    ]);
+    echo "berhasil";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +102,7 @@
                     <div class="col-md-8">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form role="form" action="insert.php" method="post">
+                            <form role="form" action="" method="post">
                                 <div class="form-group">
                                     <input type="text" id="name" name="nama_bk" placeholder="Nama" required="required" class="form-control" data-validation-required-message="Silahkan masukan nama">
                                 </div>
@@ -95,7 +126,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div> -->
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Booking Now</button>
+                                    <button class="btn" type="submit" id="sendMessageButton" name="submit" >Booking Now</button>
                                 </div>
                             </form>
                         </div>
