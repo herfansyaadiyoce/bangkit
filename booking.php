@@ -104,6 +104,9 @@ if (isset($_POST['submit'])) {
                             <div id="success"></div>
                             <form role="form" action="" method="post">
                                 <div class="form-group">
+                                    <input class="form-control" id="harga" name="harga_bk" placeholder="Harga" required="required" class="form-control" data-validation-required-message="Silahkan masukan harga">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" id="name" name="nama_bk" placeholder="Nama" required="required" class="form-control" data-validation-required-message="Silahkan masukan nama">
                                 </div>
                                 <div class="form-group">
@@ -121,6 +124,7 @@ if (isset($_POST['submit'])) {
                                 <div class="form-group">
                                     <textarea class="form-control" id="massage" name="pesan_bk" placeholder="Pesan" required="required" class="form-control" data-validation-required-message="Silahkan masukan pesan"></textarea>
                                 </div>
+
                                 <!-- <div class="control-group">
                                     <textarea class="form-control" id="pesan_bk" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
                                     <p class="help-block text-danger"></p>
