@@ -6,12 +6,12 @@ error_reporting(0);
 session_start();
 
 if (isset($_POST['submit'])) {
-    $username= $_SESSION['username'];
+    $username = $_SESSION['username'];
     $nomorhp = $_POST['nomorhp_bk'];
     $service = $_POST['service_bk'];
     $waktu = $_POST['waktu_bk'];
     $tanggal = $_POST['tanggal_bk'];
-    $pesan =$_POST['pesan_bk'];
+    $pesan = $_POST['pesan_bk'];
 
 
     $db = new firebaseRDB("https://bangkitv2-19540-default-rtdb.firebaseio.com/");
@@ -19,10 +19,10 @@ if (isset($_POST['submit'])) {
     $insert = $db->insert("booking", [
         "username"      => $username,
         "nomorhp"       =>  $nomorhp,
-        "service"       =>$service,
+        "service"       => $service,
         "waktu"         => $waktu,
-        "tanggal"       =>$tanggal,
-        "pesan"         =>$pesan
+        "tanggal"       => $tanggal,
+        "pesan"         => $pesan
     ]);
     echo "berhasil";
 }
@@ -104,9 +104,6 @@ if (isset($_POST['submit'])) {
                             <div id="success"></div>
                             <form role="form" action="" method="post">
                                 <div class="form-group">
-                                    <input class="form-control" id="harga" name="harga_bk" placeholder="Harga" required="required" class="form-control" data-validation-required-message="Silahkan masukan harga">
-                                </div>
-                                <div class="form-group">
                                     <input type="text" id="name" name="nama_bk" placeholder="Nama" required="required" class="form-control" data-validation-required-message="Silahkan masukan nama">
                                 </div>
                                 <div class="form-group">
@@ -130,7 +127,7 @@ if (isset($_POST['submit'])) {
                                     <p class="help-block text-danger"></p>
                                 </div> -->
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton" name="submit" >Booking Now</button>
+                                    <button class="btn" type="submit" id="sendMessageButton" name="submit">Booking Now</button>
                                 </div>
                             </form>
                         </div>
